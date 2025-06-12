@@ -7,16 +7,16 @@ const makeChange = (c) => {
 		p:0
 	}
 
-	change.q = Math.floor(amount/25);
-	amount %= 25;
+	change.q = Math.floor(c/25);
+	c %= 25;
 
-	change.d = Math.floor(amount/10);
-	amount %= 10;
+	change.d = Math.floor(c/10);
+	c %= 10;
 
-	change.n = Math.floor(amount/5);
-	amount %= 5;
+	change.n = Math.floor(c/5);
+	c %= 5;
 
-	change.q = amount;
+	change.p = c;
 
 	return change;
 };
